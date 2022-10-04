@@ -1,0 +1,14 @@
+
+:root{
+	--RemFactor:  1.5;
+	--SizeFactor: 3;
+}
+
+.Text{
+	font-size: var(--Size);
+}
+
+.Text.Implicit.Static  {--Size: calc(    (1rem * 1.5             ) * 3                );}
+.Text.Explicit.Static  {--Size: calc(calc(1rem * 1.5             ) * 3                );}
+.Text.Implicit.Variable{--Size: calc(    (1rem * var(--RemFactor)) * var(--SizeFactor));}
+.Text.Explicit.Variable{--Size: calc(calc(1rem * var(--RemFactor)) * var(--SizeFactor));}
